@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Pixabay Search (Express Version) </title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+    </head>
+    <body class="jumbotron">
+
+        <h2> Pixabay Search (Express Version) </h2>
+        
+        <form action="/results" method="GET">
+            
+        <div class="row justify-content-center">
+            <label class="col-1 col-form-label"> KeyWord </label>
+            <div class="col-1">
+                <input type="text" name="keyword" class="col"/>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <label class="col-1 col-form-label"> Orientation </label>
+            <div class="col-1">
+                <select class="col align-self-left" name="orientation">
+                    <option class="dropdown-item"> Vertical </option>
+                    <option class="dropdown-item"> Horizontal </option>
+                </select>
+            </div>
+        </div>
+            
+        <button class="btn btn-outline-warning">Search</button>
+
+        </form> <br>
+        
+        <hr class="jumbotron">
+        
+        <div class="row">
+            <div class="column">
+                <h3>Likes: <%= imgs.hits[img[0]].likes %></h3>
+                <img src='<%= imgs.hits[img[0]].webformatURL%>' width='350'>
+            </div>
+            <div class="column">
+                <h3>Likes: <%= imgs.hits[img[1]].likes %></h3>
+                <img src='<%= imgs.hits[img[1]].webformatURL%>' width='350'>
+            </div>
+            <div class="column">
+                <h3>Likes: <%= imgs.hits[img[2]].likes %></h3>
+                <img src='<%= imgs.hits[img[2]].webformatURL%>' width='350'>
+            </div>
+            <div class="column">
+                <h3>Likes: <%= imgs.hits[img[3]].likes %></h3>
+                <img src='<%= imgs.hits[img[3]].webformatURL%>' width='350'>
+            </div>
+        </div>
+
+    </body>
+</html>

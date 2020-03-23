@@ -1,0 +1,17 @@
+.images {
+    width: 250px;
+    border-radius: 30px;
+    /*float: left;*/
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.col-sm-1 {
+    text-align: center;
+}
+
+.btn, .btn-outline-warning {
+    text-align: center;
+}
